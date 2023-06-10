@@ -1,0 +1,23 @@
+<div class="device_interfaces">
+  <div class="interfaces">
+    <div class="header_row row">
+      <div class="cell">ID</div>
+      <div class="cell">Status</div>
+      <div class="cell">In Errors</div>
+      <div class="cell">Out Errors</div>
+      <div class="cell">In Throughput</div>
+      <div class="cell">Out Throughput</div>
+    </div>
+    <div *ngFor="let deviceInterface of deviceInterfaces" class="interface">
+      <div class="row">
+        <div class="cell">{{deviceInterface.id}}</div>
+        <div class="cell">{{deviceInterface.status}}</div>
+        <div class="cell">{{deviceInterface.inErrors}}</div>
+        <div class="cell">{{deviceInterface.outErrors}}</div>
+        <div class="cell">{{deviceInterface.inThroughput}}</div>
+        <div class="cell">{{deviceInterface.outThroughput}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+

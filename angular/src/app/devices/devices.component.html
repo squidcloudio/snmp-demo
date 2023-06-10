@@ -1,0 +1,22 @@
+<div *ngIf="devicesObs | async as devices" class="devices_page">
+  <div class="devices">
+    <div class="header_row row">
+      <div class="cell">Device ID</div>
+      <div class="cell">Status</div>
+      <div class="cell">Last updated</div>
+      <div class="cell">Interfaces</div>
+    </div>
+    <div *ngFor="let device of devices" class="device" (click)="selectDevice(device.id)">
+      <div class="row">
+        <div class="cell">{{device.id}}</div>
+        <div class="cell">{{device.status}}</div>
+        <div class="cell">{{device.lastUpdateDate | date: 'medium'}}</div>
+        <div class="cell">{{device.interfaces.length}}</div>
+      </div>
+      <div class="device_details" *ngIf="selectedDeviceId === device.id">
+        <device-interfaces [deviceInterfaces]="device.interfaces"></device-interfaces>
+      </div>
+    </div>
+  </div>
+</div>
+

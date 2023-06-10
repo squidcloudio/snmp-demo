@@ -1,0 +1,29 @@
+.device_interfaces {
+  width: 100%;
+
+  .interfaces {
+    width: 100%;
+    overflow: hidden;
+
+    .row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      font-size: 12px;
+      height: 24px;
+
+      .cell {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      &.header_row {
+        background: #188FFF;
+        color: #FFFFFF;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
