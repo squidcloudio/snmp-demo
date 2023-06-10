@@ -18,7 +18,7 @@ import { DeviceInterfacesComponent } from './device-interfaces/device-interfaces
     AppRoutingModule,
     SquidModule.forRoot({
       appId: '527oengwdj2yknxjbq',
-      region: 'local',
+      region: 'us-east-1.aws',
     }),
   ],
   providers: [],
